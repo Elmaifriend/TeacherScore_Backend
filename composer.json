@@ -1,0 +1,21 @@
+{
+    "name": "elmaifriend/teacher-score",
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./models",
+            "Controller\\" : "./controllers",
+            "Class\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Elmaifriend",
+            "email": "fgp332@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.7",
+        "slim/php-view": "^3.4"
+    }
+}
