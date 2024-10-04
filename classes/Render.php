@@ -10,7 +10,7 @@ use Slim\Views\PhpRenderer;
 class Render{
     public static function render( Response $response, $view ){
         $renderer = new PhpRenderer( __DIR__ . "/../views" );
-        //$renderer->setLayout("layout.php");
+        $renderer->setLayout("layout.php");
         return $renderer->render( $response, $view );
     }
 }

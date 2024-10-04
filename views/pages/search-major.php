@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeacherScore</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles/main.css">
-    <script type="module" src="/components/header.js"></script>
-    <script type="module" src="/components/simple-card.js"></script>
-</head>
-
-<body class="d-flex flex-column"> 
-    <header-component></header-component>
     
     <div class="container flex-grow-1 d-flex align-content-center flex-column row-gap-3 p-4">
     
@@ -28,15 +14,12 @@
         
     </div>
 
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
     <script>
         document.getElementById("search-input").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
-                window.location.href = "search-subject.html";
+                window.location.href = "/buscar/materia";
             }
         });
     </script>
-</body>
-
-</html>

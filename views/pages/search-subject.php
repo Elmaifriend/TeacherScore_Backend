@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeacherScore</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles/main.css">
-    <script type="module" src="/components/header.js"></script>
-    <script type="module" src="/components/simple-card.js"></script>
-</head>
-
-<body class="d-flex flex-column"> 
-    <header-component></header-component>
-    
     <div class="container flex-grow-1 d-flex align-content-center flex-column row-gap-3 p-4">
     
         <div class="search-bar container-xxl d-flex justify-content-center align-items-center flex-column p-0">
@@ -33,10 +18,7 @@
         document.getElementById("search-input").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
-                window.location.href = "search-teachers.html";
+                window.location.href = "/buscar/profesor";
             }
         });
     </script>
-</body>
-
-</html>

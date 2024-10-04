@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeacherScore</title>
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <style>
-        .reaction-bar i {
-            font-style: normal;
-            font-size: 14px;
-        }
-        @media screen and (min-width: 768px) {
-            .content {
-                display: grid !important;
-                grid-template-rows: 1fr 2rem;
-                grid-template-areas: "warning" "extra";
-            }
-            .extra {
-                grid-area: extra;
-            }
-            .warning {
-                grid-area: warning;
-            }
-        }
-    </style>
-</head>
-
-<body class="d-flex flex-column"> 
-    <header-component></header-component>
-    
     <div class="container py-4">
         <div class="row">
             <div class="description col-md-4 d-flex flex-column align-items-center">
@@ -90,9 +57,26 @@
         </div>
     </div>
 
+    <style>
+        .reaction-bar i {
+            font-style: normal;
+            font-size: 14px;
+        }
+        @media screen and (min-width: 768px) {
+            .content {
+                display: grid !important;
+                grid-template-rows: 1fr 2rem;
+                grid-template-areas: "warning" "extra";
+            }
+            .extra {
+                grid-area: extra;
+            }
+            .warning {
+                grid-area: warning;
+            }
+        }
+    </style>
+
     <script src="/js/bootstrap.bundle.js"></script>
     <script type="module" src="/js/header.js"></script>
     <script type="module" src="/js/comment.js"></script>
-</body>
-
-</html>
