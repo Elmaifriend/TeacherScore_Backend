@@ -16,9 +16,28 @@ const elements = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    elements.rating.addEventListener("input", () => {
-        rateStars(elements.rating.valueAsNumber, elements.stars); 
+    if( elements.rating ){
+        elements.rating.addEventListener("input", () => {
+            rateStars(elements.rating.valueAsNumber, elements.stars); 
+        });
+    }
+    
+
+
+    //////////////
+    ///jQuery
+    //////////////
+    $(function () {
+        count = 0;
+        wordsArray = ["Escuela", "Plantel", "Carrera", "Materia", "Profesor" ];
+        setInterval(function () {
+        count++;
+        $("#registraTu").fadeOut(400, function () {
+            $(this).text("Registra Tu " + wordsArray[count % wordsArray.length]).fadeIn(400);
+        });
+        }, 2000);
     });
+
 });  
 
 function rateStars(rating, stars) {
@@ -32,3 +51,4 @@ function rateStars(rating, stars) {
         rating--;
     });
 }
+
