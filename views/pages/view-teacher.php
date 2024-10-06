@@ -1,7 +1,14 @@
-    <div class="container py-4">
-        <div class="row">
-            <div class="description col-md-4 d-flex flex-column align-items-center">
-                <img src="/img/logo-placeholder.png" alt="Teacher Image" class="img-fluid rounded-circle mb-2" style="width: 160px;">
+<div class="container py-4">
+        <div class="teacher-card container py-4 d-flex flex-column gap-3 gap-md-2">
+            <div class="warning container d-flex justify-content-center">
+                <div class="alert alert-danger d-flex justify-content-center align-items-center w-100 m-0" role="alert" style="min-height: 120px;">                    
+                    <img src="/assets/red-alert-icon.svg" class="img-fluid me-2" style="width: 60px;">
+                    <span class="text-center"><strong>Este profesor tiene muchas críticas negativas</strong></span>
+                </div>
+            </div>
+    
+            <div class="description d-flex flex-column align-items-center">
+                <img src="/assets/logo-placeholder.png" alt="Teacher Image" class="img-fluid rounded-circle mb-2" style="width: 160px;">
                 <h5 class="text-center">Profesor Apellido Apellido</h5>
                 <ul class="list-unstyled text-center row row-cols-2">
                     <li>Materia 1</li>
@@ -10,73 +17,60 @@
                     <li>Materia 4</li>
                 </ul>
                 <div class="stars d-flex column-gap-1 justify-content-center">
-                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                    <input max="5" step="0.5" type="range" value="5">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
                 </div>
             </div>
-            <div class="content col-sm d-flex flex-column row-gap-3">
-                <div class="alert alert-danger d-flex justify-content-center align-items-center mb-0" role="alert" style="min-height: 120px;">                    
-                    <img src="/img/red-alert-icon.svg" class="img-fluid me-2" style="width: 60px;">
-                    <span class="text-center"><strong>Este profesor tiene muchas críticas negativas</strong></span>
+    
+            <hr class="d-md-none">
+    
+            <div class="reactions container d-md-flex justify-content-end">
+                <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill btn-sm">
+                        <span class="noto-color-emoji-regular">❤️</span>
+                        <span class="count">0</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill">
+                        <span class="noto-color-emoji-regular">👍️</span>
+                        <span class="count">0</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill">
+                        <span class="noto-color-emoji-regular">😐</span>
+                        <span class="count">0</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill">
+                        <span class="noto-color-emoji-regular">🙁</span>
+                        <span class="count">0</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill">
+                        <span class="noto-color-emoji-regular">🥵</span>
+                        <span class="count">0</span>
+                    </button>
                 </div>
-                <div class="extra d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-end">
-                    <div class="d-flex align-items-center row-gap-3">
-                        <div class="reaction-bar d-flex justify-content-around column-gap-2">
-                            <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <img class="emoji-reaction" src="/img/emojis/heart.svg" alt=""> 0
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary rounded-pill" >
-                                <img class="emoji-reaction" src="/img/emojis/thumbs-up.svg" alt=""> 0
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <img class="emoji-reaction" src="/img/emojis/neutral-face.svg" alt=""> 0 
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <img class="emoji-reaction" src="/img/emojis/slightly-frowning-face.svg" alt=""> 0
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <img class="emoji-reaction" src="/img/emojis/hot-face.svg" alt=""> 0
-                            </button>
+            </div>
+        </div>
+        
+        <div class="container mt-4">
+            <h4>Comentarios</h4>
+            <div class="list-group d-flex gap-2">
+                <div class="comment list-group-item rounded">
+                    <div class="d-flex w-100 column-gap-2 align-items-center">
+                        <img src="/assets/logo-placeholder.png" alt="User" class="avatar rounded-circle" style="width: 60px; height: 60px;">
+                        <div class="w-100 d-flex flex-column justify-content-center column-gap-2 align-items-stretch">
+                            <div class="d-flex justify-content-between">
+                                <span class="user"><strong>@usuario</strong></span>
+                                <small class="date">Mes dia, año</small>
+                            </div>
+                            <p class="text m-0">Contenido del comentario.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="container mt-4">
-        <h4>Comentarios</h4>
-        <div class="list-group">
-            <comment-component></comment-component>
-            <comment-component></comment-component>
-            <comment-component></comment-component>
-            <comment-component></comment-component>
-        </div>
-    </div>
 
-    <style>
-        .reaction-bar i {
-            font-style: normal;
-            font-size: 14px;
-        }
-        @media screen and (min-width: 768px) {
-            .content {
-                display: grid !important;
-                grid-template-rows: 1fr 2rem;
-                grid-template-areas: "warning" "extra";
-            }
-            .extra {
-                grid-area: extra;
-            }
-            .warning {
-                grid-area: warning;
-            }
-        }
-    </style>
-
-    <script src="/js/bootstrap.bundle.js"></script>
-    <script type="module" src="/js/header.js"></script>
-    <script type="module" src="/js/comment.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
