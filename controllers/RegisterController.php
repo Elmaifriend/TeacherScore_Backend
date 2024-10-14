@@ -5,10 +5,21 @@ namespace Controller;
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
 use Class\Render;
+use Model\University;
 
 class RegisterController{
     
     public static function registerSchool( Request $request, Response $response ) : Response{
+
+        if( $request->getMethod() == "POST" ){
+            $args = $request->getParsedBody();
+
+            $universidad = new University( $args );
+            
+            debuguear($universidad);
+            
+        }
+
         return Render::render( $response, "/register/register_school.php" );
     }
 

@@ -1,7 +1,7 @@
 <?php
 
 declare( strict_types = 1 );
-require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . "/../includes/config.php";
 
 use Controller\PagesController;
 use Slim\Factory\AppFactory;
@@ -30,6 +30,7 @@ $app->get( "/ver/profesor", [PagesController::class, "viewTeacher"] );
 /// Registration pages
 //////////////
 $app->get( "/registrar/escuela", [RegisterController::class, "registerSchool"] );
+$app->post( "/registrar/escuela", [RegisterController::class, "registerSchool"] );
 $app->get( "/registrar/plantel", [RegisterController::class, "registerPlantel"] );
 $app->get( "/registrar/carrera", [RegisterController::class, "registerMajor"] );
 $app->get( "/registrar/materia", [RegisterController::class, "registerSubject"] );

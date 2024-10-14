@@ -1,19 +1,24 @@
-<div class="container-md">
-    <h1 class="text-center">Registrar Universidad</h1>
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Nombre de la escuela</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Universidad Autonoma de...">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Acronimo de la escuela</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="UNAM...">
-        </div>
-        <div class="form-group">
-            <label class="d-block" for="exampleFormControlFile1">Sube el logo de tu escuela</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
+<div class="container-md d-flex justify-content-center">
+    <div class="d-flex flex-column">
+
+        <h1 class="text-center">Registrar Universidad</h1>
+
+        <form method="POST" action="/registrar/escuela" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombre de la escuela</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Universidad Autonoma de..." name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="acronimo">Acronimo de la escuela</label>
+                <input type="text" class="form-control" id="acronimo" placeholder="UNAM..." name="acronimo">
+            </div>
+            <div class="form-group">
+                <label class="d-block" for="foto">Sube el logo de tu escuela</label>
+                <input type="file" class="form-control-file" id="foto" name="foto">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
 </div>
